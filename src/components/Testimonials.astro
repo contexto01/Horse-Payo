@@ -1,0 +1,140 @@
+---
+const testimonials = [
+  {
+    title: '¡La mejor experiencia de mi vida!',
+    quote: 'Hicimos el Plan Pasadía 6 con mi pareja y fue increíble. El canopy nos dejó sin aliento, el rafting fue adrenalina pura y la cabalgata al atardecer fue mágica. Los guías son súper profesionales y el almuerzo típico delicioso.',
+    author: 'María Camila Ríos',
+    location: 'Bogotá · Marzo 2025',
+    avatar: 'MC',
+    color: 'bg-rose-400',
+    stars: 5,
+  },
+  {
+    title: 'Adrenalina garantizada desde la llegada',
+    quote: 'Somos un grupo de amigos que buscaba aventura y Horse Payo nos la dio todo. Los cuatrimotos por la montaña fueron épicos y el torrentismo en la cascada fue un reto que superamos juntos. ¡Volveremos!',
+    author: 'Andrés Felipe Gómez',
+    location: 'Medellín · Febrero 2025',
+    avatar: 'AF',
+    color: 'bg-blue-500',
+    stars: 5,
+  },
+  {
+    title: 'Perfecto para familias aventureras',
+    quote: 'Fuimos con nuestros dos hijos adolescentes y todos disfrutaron. Las actividades tienen niveles para todos, el equipo de seguridad es impecable y la piscina natural fue el cierre perfecto después de un día intenso.',
+    author: 'Familia López Herrera',
+    location: 'Bogotá · Enero 2025',
+    avatar: 'LH',
+    color: 'bg-purple-500',
+    stars: 5,
+  },
+  {
+    title: 'Naturaleza y diversión en un solo lugar',
+    quote: 'La cabalgata ecológica fue mi favorita. El guía nos enseñó plantas medicinales y vimos aves exóticas. El canopy es larguísimo, cruzas todo el valle. Definitivamente uno de los mejores destinos de Colombia.',
+    author: 'Laura Patricia Vargas',
+    location: 'Cali · Diciembre 2024',
+    avatar: 'LP',
+    color: 'bg-green-500',
+    stars: 5,
+  },
+  {
+    title: 'Cumpleaños inolvidable',
+    quote: 'Celebré mi cumpleaños con amigos en Horse Payo y fue la mejor decisión. Hicimos rafting, cuatrimotos y canopy en un solo día. El equipo tomó fotos increíbles. El Plan 6 vale cada peso.',
+    author: 'Carlos Eduardo Méndez',
+    location: 'Barranquilla · Noviembre 2024',
+    avatar: 'CE',
+    color: 'bg-orange-500',
+    stars: 5,
+  },
+  {
+    title: 'El paraíso de la adrenalina en Colombia',
+    quote: 'Llevábamos años escuchando de Horse Payo y por fin fuimos. Quedamos IMPRESIONADOS. El torrentismo en la cascada es una experiencia única y los cuatrimotos por la montaña son épicos. ¡100% recomendado!',
+    author: 'Daniela Torres & Amigos',
+    location: 'Bogotá · Octubre 2024',
+    avatar: 'DT',
+    color: 'bg-pink-500',
+    stars: 5,
+  },
+];
+---
+
+<section id="testimonios" class="py-24 bg-forest-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="section-tag reveal">OPINIONES</span>
+      <h2 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mt-4 mb-4 reveal reveal-delay-1">
+        Lo que dicen nuestros <span class="text-primary">aventureros</span>
+      </h2>
+      <p class="text-gray-500 max-w-lg mx-auto font-body reveal reveal-delay-2">
+        Miles de personas han vivido la experiencia Horse Payo. Esto es lo que cuentan.
+      </p>
+    </div>
+
+    <!-- Testimonials grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {testimonials.map((t, i) => (
+        <div class={`bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 reveal reveal-delay-${(i % 3) + 1}`}>
+
+          <!-- Stars -->
+          <div class="flex gap-1 mb-3">
+            {Array(t.stars).fill(null).map(() => (
+              <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+          </div>
+
+          <!-- Title -->
+          <h3 class="font-heading font-bold text-primary-dark text-base mb-3">
+            {t.title}
+          </h3>
+
+          <!-- Quote -->
+          <p class="text-gray-500 text-sm leading-relaxed mb-6 font-body">
+            "{t.quote}"
+          </p>
+
+          <!-- Author -->
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center text-white text-xs font-bold flex-shrink-0`}>
+              {t.avatar}
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 text-sm">{t.author}</p>
+              <p class="text-gray-400 text-xs">{t.location}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Rating summary -->
+    <div class="mt-16 text-center reveal">
+      <div class="inline-flex flex-col sm:flex-row items-center gap-6 bg-white rounded-2xl px-10 py-6 shadow-lg border border-gray-100">
+        <div class="text-center">
+          <div class="font-display text-6xl text-primary-dark leading-none">5.0</div>
+          <div class="flex gap-1 justify-center my-2">
+            {Array(5).fill(null).map(() => (
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="text-sm text-gray-400">Calificación promedio</p>
+        </div>
+        <div class="w-px h-16 bg-gray-200 hidden sm:block"></div>
+        <div class="text-center">
+          <div class="font-display text-6xl text-primary-dark leading-none">5000+</div>
+          <p class="text-sm text-gray-400 mt-2">Aventureros satisfechos</p>
+        </div>
+        <div class="w-px h-16 bg-gray-200 hidden sm:block"></div>
+        <div class="text-center">
+          <div class="font-display text-6xl text-primary-dark leading-none">100%</div>
+          <p class="text-sm text-gray-400 mt-2">Recomendarían Horse Payo</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

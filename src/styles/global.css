@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    @apply text-gray-800 antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-primary-dark font-bold px-6 py-3 rounded-full 
+           inline-flex items-center gap-2 hover:bg-accent-dark transition-all 
+           duration-300 hover:scale-105 active:scale-95 shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-primary-dark text-white font-semibold px-6 py-3 rounded-full 
+           inline-flex items-center gap-2 hover:bg-primary transition-all 
+           duration-300 hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-white text-white font-semibold px-6 py-3 rounded-full 
+           inline-flex items-center gap-2 hover:bg-white hover:text-primary-dark 
+           transition-all duration-300;
+  }
+
+  .section-tag {
+    @apply inline-block bg-forest-100 text-primary font-semibold text-xs 
+           tracking-widest uppercase px-4 py-1.5 rounded-full border border-primary/20;
+  }
+
+  .card-plan {
+    @apply bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl 
+           transition-all duration-300 hover:-translate-y-2 border border-gray-100;
+  }
+
+  .badge-activity {
+    @apply bg-forest-100 text-primary text-xs font-semibold px-3 py-1 
+           rounded-full border border-primary/20 flex items-center gap-1;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(0,0,0,0.75) 0%,
+      rgba(0,0,0,0.4) 60%,
+      rgba(0,0,0,0.1) 100%
+    );
+  }
+}
+
+/* Animations on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* Whatsapp float button */
+.whatsapp-float {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  bottom: 28px;
+  right: 28px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.7);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d6a4f;
+  border-radius: 4px;
+}
