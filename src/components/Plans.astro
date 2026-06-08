@@ -4,7 +4,7 @@ const plans = [
     id: 'pasadia-2',
     name: 'Plan Pasadía 2',
     subtitle: 'Rafting + Actividades',
-    image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80',
+    image: '/plan-rafting',
     activities: ['Rafting en rápidos', 'Puentes colgantes', 'Paseo en tren artesanal', 'Muro de Torrentismo Artificial'],
     benefits: ['Almuerzo incluido', 'Piscina natural', 'Parqueadero', 'Seguro de accidentes', 'Guía certificado'],
     pricePerPerson: '$116.000',
@@ -16,7 +16,7 @@ const plans = [
     id: 'pasadia-4',
     name: 'Plan Pasadía 4',
     subtitle: 'Cuatrimoto + Canopy',
-    image: 'https://images.unsplash.com/photo-1533130061792-64b345e4a833?w=800&q=80',
+    image: '/plan-cuatrimoto',
     activities: ['Cuatrimotos todo terreno', 'Canopy zip line', 'Puentes colgantes',],
     benefits: ['Almuerzo incluido', 'Piscina natural', 'Parqueadero', 'Seguro de accidentes', 'Equipo completo'],
     pricePerPerson: '$93.000',
@@ -28,7 +28,7 @@ const plans = [
     id: 'pasadia-5',
     name: 'Plan Pasadía 5',
     subtitle: 'Cabalgata + Canopy',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80',
+    image: '/plan-cabalgata',
     activities: ['Cabalgata ecológica', 'Canopy zip line', 'Paseo por cascadas'],
     benefits: ['Almuerzo incluido', 'Piscina natural', 'Parqueadero', 'Seguro de accidentes', 'Guía especializado'],
     pricePerPerson: '$98.000',
@@ -40,7 +40,7 @@ const plans = [
     id: 'pasadia-6',
     name: 'Plan Pasadía 6',
     subtitle: 'Aventura Completa',
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80',
+    image: '/plan-completa',
     activities: ['Canopy corto', 'Muro de Torrentismo Artificial', 'Cabalgata ecológica', 'Cuatrimotos', 'Torrentismo (cascadas)'],
     benefits: ['Almuerzo', 'Piscina natural', 'Parqueadero', 'Seguro de accidentes', 'Equipo premium', 'Fotos incluidas'],
     pricePerPerson: '$113.000',
@@ -72,15 +72,19 @@ const plans = [
 
           <!-- Image header -->
           <div class="relative h-52 overflow-hidden">
-            <img
-              src={plan.image}
-              alt={`${plan.name} – ${plan.subtitle} en Horse Payo, Útica`}
-              class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-              width="800"
-              height="520"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture>
+              <source srcset={`${plan.image}.webp`} type="image/webp" />
+              <source srcset={`${plan.image}.jpg`} type="image/jpeg" />
+              <img
+                src={`${plan.image}.jpg`}
+                alt={`${plan.name} – ${plan.subtitle} en Horse Payo, Útica`}
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                width="800"
+                height="520"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
             <!-- Plan name overlay -->

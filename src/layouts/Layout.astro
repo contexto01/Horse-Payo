@@ -1,31 +1,34 @@
 ---
-import '../styles/global.css';
+import '../styles/global.css'
 
 export interface Props {
-  title?: string;
-  description?: string;
-  canonical?: string;
-  ogImage?: string;
+  title?: string
+  description?: string
+  canonical?: string
+  ogImage?: string
 }
 
-const { 
+const {
   title = 'Horse Payo – Aventura y Ecoturismo en Útica, Cundinamarca',
   description = 'Vive la aventura extrema. Canopy, rafting, cabalgata ecológica, cuatrimotos y torrentismo en el corazón de la naturaleza colombiana. A solo 2 horas de Bogotá.',
   canonical = 'https://horsepayo.com/',
-  ogImage = 'https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=1200&q=80'
-} = Astro.props;
+  ogImage = 'https://horsepayo.com/hero.jpg'
+} = Astro.props
 
-const siteName = 'Horse Payo';
-const siteUrl = 'https://horsepayo.com';
+const siteName = 'Horse Payo'
+const siteUrl = 'https://horsepayo.com'
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es-CO">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="ecoturismo Colombia, aventura Útica, canopy Cundinamarca, rafting, cabalgata ecológica, cuatrimotos, torrentismo, turismo extreme, Útica Cundinamarca" />
+    <meta
+      name="keywords"
+      content="ecoturismo Colombia, aventura Útica, canopy Cundinamarca, rafting, cabalgata ecológica, cuatrimotos, torrentismo, turismo extreme, Útica Cundinamarca"
+    />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Horse Payo" />
     <meta name="theme-color" content="#1b4332" />
@@ -34,7 +37,7 @@ const siteUrl = 'https://horsepayo.com';
     <link rel="canonical" href={canonical} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/Logo.jpg" />
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -67,106 +70,121 @@ const siteUrl = 'https://horsepayo.com';
     <meta name="twitter:image" content={ogImage} />
 
     <!-- JSON-LD Structured Data: LocalBusiness -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Horse Payo",
-      "description": "Agencia de ecoturismo y aventura en Útica, Cundinamarca. Canopy, rafting, cabalgata ecológica, cuatrimotos y torrentismo.",
-      "image": ogImage,
-      "url": siteUrl,
-      "telephone": "+573228837910",
-      "email": "info@horsepayo.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Vereda Payo",
-        "addressLocality": "Útica",
-        "addressRegion": "Cundinamarca",
-        "addressCountry": "CO"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "4.8833",
-        "longitude": "-74.0333"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "08:00",
-          "closes": "17:00"
-        }
-      ],
-      "priceRange": "$$",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "5000",
-        "bestRating": "5"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Planes de Aventura",
-        "itemListElement": [
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        name: 'Horse Payo',
+        description:
+          'Agencia de ecoturismo y aventura en Útica, Cundinamarca. Canopy, rafting, cabalgata ecológica, cuatrimotos y torrentismo.',
+        image: ogImage,
+        url: siteUrl,
+        telephone: '+573228837910',
+        email: 'info@horsepayo.com',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Vereda Payo',
+          addressLocality: 'Útica',
+          addressRegion: 'Cundinamarca',
+          addressCountry: 'CO'
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: '4.8833',
+          longitude: '-74.0333'
+        },
+        openingHoursSpecification: [
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Plan Pasadía 2 - Rafting + Actividades"
-            },
-            "price": "116000",
-            "priceCurrency": "COP"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Plan Pasadía 4 - Cuatrimoto + Canopy"
-            },
-            "price": "93000",
-            "priceCurrency": "COP"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Plan Pasadía 5 - Cabalgata + Canopy"
-            },
-            "price": "98000",
-            "priceCurrency": "COP"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Plan Pasadía 6 - Aventura Completa"
-            },
-            "price": "113000",
-            "priceCurrency": "COP"
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: [
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday',
+              'Sunday'
+            ],
+            opens: '08:00',
+            closes: '17:00'
           }
+        ],
+        priceRange: '$$',
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5.0',
+          reviewCount: '5000',
+          bestRating: '5'
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Planes de Aventura',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Plan Pasadía 2 - Rafting + Actividades'
+              },
+              price: '116000',
+              priceCurrency: 'COP'
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Plan Pasadía 4 - Cuatrimoto + Canopy'
+              },
+              price: '93000',
+              priceCurrency: 'COP'
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Plan Pasadía 5 - Cabalgata + Canopy'
+              },
+              price: '98000',
+              priceCurrency: 'COP'
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Plan Pasadía 6 - Aventura Completa'
+              },
+              price: '113000',
+              priceCurrency: 'COP'
+            }
+          ]
+        },
+        sameAs: [
+          'https://www.instagram.com/horsepayo',
+          'https://www.facebook.com/horsepayo',
+          'https://www.tiktok.com/@horsepayo',
+          'https://www.youtube.com/@horsepayo'
         ]
-      },
-      "sameAs": [
-        "https://www.instagram.com/horsepayo",
-        "https://www.facebook.com/horsepayo",
-        "https://www.tiktok.com/@horsepayo",
-        "https://www.youtube.com/@horsepayo"
-      ]
-    })} />
+      })}
+    />
   </head>
   <body class="overflow-x-hidden">
     <slot />
 
     <!-- Scroll reveal script -->
     <script>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.1 });
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible')
+            }
+          })
+        },
+        { threshold: 0.1 }
+      )
 
-      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
     </script>
   </body>
 </html>
