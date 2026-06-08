@@ -5,7 +5,7 @@ const plans = [
     name: 'Plan Pasadía 2',
     subtitle: 'Rafting + Actividades',
     image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80',
-    activities: ['Rafting en rápidos', 'Puentes colgantes', 'Trekking ecológico', 'Almuerzo típico'],
+    activities: ['Rafting en rápidos', 'Puentes colgantes', 'Paseo en tren artesanal', 'Muro de Torrentismo Artificial'],
     benefits: ['Almuerzo incluido', 'Piscina natural', 'Parqueadero', 'Seguro de accidentes', 'Guía certificado'],
     pricePerPerson: '$116.000',
     priceFor2: '$232.000',
@@ -17,7 +17,7 @@ const plans = [
     name: 'Plan Pasadía 4',
     subtitle: 'Cuatrimoto + Canopy',
     image: 'https://images.unsplash.com/photo-1533130061792-64b345e4a833?w=800&q=80',
-    activities: ['Cuatrimotos todo terreno', 'Canopy zip line', 'Puentes colgantes', 'Paseo ecológico'],
+    activities: ['Cuatrimotos todo terreno', 'Canopy zip line', 'Puentes colgantes',],
     benefits: ['Almuerzo incluido', 'Piscina natural', 'Parqueadero', 'Seguro de accidentes', 'Equipo completo'],
     pricePerPerson: '$93.000',
     priceFor2: '$186.000',
@@ -51,13 +51,13 @@ const plans = [
 ];
 ---
 
-<section id="planes" class="py-24 bg-white">
+<section id="planes" class="py-24 bg-white" aria-labelledby="plans-heading">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Section header -->
     <div class="text-center mb-16">
       <span class="section-tag reveal">PLANES DE AVENTURA</span>
-      <h2 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mt-4 mb-4 reveal reveal-delay-1">
+      <h2 id="plans-heading" class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mt-4 mb-4 reveal reveal-delay-1">
         Elige tu aventura
       </h2>
       <p class="text-gray-500 max-w-xl mx-auto font-body reveal reveal-delay-2">
@@ -74,9 +74,12 @@ const plans = [
           <div class="relative h-52 overflow-hidden">
             <img
               src={plan.image}
-              alt={plan.name}
+              alt={`${plan.name} – ${plan.subtitle} en Horse Payo, Útica`}
               class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+              width="800"
+              height="520"
               loading="lazy"
+              decoding="async"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 

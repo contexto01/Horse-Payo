@@ -14,7 +14,7 @@ const stats = [
 ];
 ---
 
-<section id="nosotros" class="py-24 bg-forest-50 overflow-hidden">
+<section id="nosotros" class="py-24 bg-forest-50 overflow-hidden" aria-labelledby="about-heading">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Header tag -->
@@ -26,7 +26,7 @@ const stats = [
 
       <!-- Left: Text content -->
       <div>
-        <h2 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark leading-tight mb-6 reveal">
+        <h2 id="about-heading" class="font-heading font-black text-4xl sm:text-5xl text-primary-dark leading-tight mb-6 reveal">
           Expertos en aventura y ecoturismo
         </h2>
 
@@ -66,9 +66,12 @@ const stats = [
         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
           <img
             src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
-            alt="Equipo de guías certificados de Horse Payo en Útica"
+            alt="Equipo de guías certificados de Horse Payo en Útica, Cundinamarca"
             class="w-full h-[520px] object-cover object-center hover:scale-105 transition-transform duration-700"
+            width="800"
+            height="520"
             loading="lazy"
+            decoding="async"
           />
           <!-- Decorative corner -->
           <div class="absolute top-4 right-4 bg-primary-dark/80 backdrop-blur text-white text-xs font-bold px-3 py-1.5 rounded-full">
