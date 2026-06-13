@@ -1,0 +1,151 @@
+---
+const plans = [
+  { value: 'Plan Pasadía 2 - Rafting + Actividades', label: 'Plan Pasadía 2 ($116.000)' },
+  { value: 'Plan Pasadía 4 - Cuatrimoto + Canopy', label: 'Plan Pasadía 4 ($93.000)' },
+  { value: 'Plan Pasadía 5 - Cabalgata + Canopy', label: 'Plan Pasadía 5 ($98.000)' },
+  { value: 'Plan Pasadía 6 - Aventura Completa', label: 'Plan Pasadía 6 ($113.000)' },
+  { value: 'Plan personalizado / grupal', label: 'Plan personalizado / grupal' },
+]
+
+const waNumber = '573228837910'
+---
+
+<section class="py-24 bg-forest-50" id="solicitar-info" aria-labelledby="form-heading">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="section-tag reveal">CONTACTO</span>
+      <h2
+        id="form-heading"
+        class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mt-4 mb-4 reveal reveal-delay-1"
+      >
+        ¿Listo para tu aventura?
+      </h2>
+      <p class="text-gray-500 max-w-lg mx-auto font-body reveal reveal-delay-2">
+        Déjanos tus datos y te contactamos al instante por WhatsApp para coordinar todo.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-3xl shadow-xl p-8 sm:p-10 reveal" id="contacto-form">
+      <form id="contactForm" class="space-y-6">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="nombre" class="block text-sm font-semibold text-primary-dark mb-1.5">
+              Nombre completo <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              placeholder="Tu nombre"
+              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all bg-gray-50"
+            />
+          </div>
+          <div>
+            <label for="telefono" class="block text-sm font-semibold text-primary-dark mb-1.5">
+              Teléfono <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              required
+              placeholder="+57 300 000 0000"
+              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all bg-gray-50"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-semibold text-primary-dark mb-1.5">
+            Correo electrónico <span class="text-gray-400 font-normal">(opcional)</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="correo@ejemplo.com"
+            class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all bg-gray-50"
+          />
+        </div>
+
+        <div>
+          <label for="plan" class="block text-sm font-semibold text-primary-dark mb-1.5">
+            Plan de interés <span class="text-red-500">*</span>
+          </label>
+          <select
+            id="plan"
+            name="plan"
+            required
+            class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all bg-gray-50"
+          >
+            <option value="">Selecciona un plan</option>
+            {plans.map((p) => (
+              <option value={p.value}>{p.label}</option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <label for="mensaje" class="block text-sm font-semibold text-primary-dark mb-1.5">
+            Mensaje o comentario <span class="text-gray-400 font-normal">(opcional)</span>
+          </label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="3"
+            placeholder="¿Alguna pregunta o requisito especial?"
+            class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all bg-gray-50 resize-none"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-accent text-primary-dark font-bold py-4 px-8 rounded-xl hover:bg-accent-dark transition-all duration-300 hover:scale-[1.01] active:scale-95 shadow-lg text-base flex items-center justify-center gap-3"
+        >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+          </svg>
+          Enviar y contactar por WhatsApp
+        </button>
+
+        <p class="text-xs text-gray-400 text-center">
+          Al enviar, serás redirigido a WhatsApp con todos tus datos listos para enviar.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm')
+  const waNumber = '{waNumber}'
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const formData = new FormData(form)
+    const nombre = formData.get('nombre')?.toString().trim() || ''
+    const telefono = formData.get('telefono')?.toString().trim() || ''
+    const email = formData.get('email')?.toString().trim() || ''
+    const plan = formData.get('plan')?.toString().trim() || ''
+    const mensaje = formData.get('mensaje')?.toString().trim() || ''
+
+    let text = `Hola! Soy ${nombre}.%0A`
+    text += `Teléfono: ${telefono}.%0A`
+
+    if (email) {
+      text += `Email: ${email}.%0A`
+    }
+
+    text += `Plan de interés: ${plan}.%0A`
+
+    if (mensaje) {
+      text += `Comentario: ${mensaje}.%0A`
+    }
+
+    text += `%0AQuiero recibir información y coordinar mi visita a Horse Payo.`
+
+    window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank')
+  })
+</script>
