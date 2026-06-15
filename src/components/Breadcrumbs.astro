@@ -9,10 +9,31 @@ export interface Props {
 }
 
 const { items } = Astro.props
+
+const lastItem = items[items.length - 1]?.label || ''
+const currentUrl = Astro.url.pathname
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Inicio',
+      item: 'https://deportesextremoshorsepayo.com/'
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: lastItem,
+      item: `https://deportesextremoshorsepayo.com${currentUrl}`
+    }
+  ]
+}
 ---
 
-<nav aria-label="Breadcrumb" class="bg-white border-b border-gray-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+<nav aria-label="Breadcrumb" class="bg-primary-dark/95 border-b border-primary">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 pt-16">
     <ol class="flex items-center gap-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
         <a
@@ -44,7 +65,7 @@ const { items } = Astro.props
                 <span itemprop="name">{item.label}</span>
               </a>
             ) : (
-              <span itemprop="name" class="text-primary font-semibold ml-1" aria-current="page">
+              <span itemprop="name" class="text-white font-semibold ml-1" aria-current="page">
                 {item.label}
               </span>
             )}
@@ -56,23 +77,4 @@ const { items } = Astro.props
   </div>
 </nav>
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": "https://deportesextremoshorsepayo.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": {JSON.stringify(items[items.length - 1]?.label || '')},
-        "item": {JSON.stringify(`https://deportesextremoshorsepayo.com${Astro.url.pathname}`)}
-      }
-    ]
-  }
-</script>
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)}>
