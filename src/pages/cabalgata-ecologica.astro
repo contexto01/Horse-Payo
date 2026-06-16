@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Breadcrumbs from '../components/Breadcrumbs.astro'
+import Navbar from '../components/Navbar.astro'
+import FormContacto from '../components/FormContacto.astro'
+import Footer from '../components/Footer.astro'
+import WhatsAppFloat from '../components/WhatsAppFloat.astro'
+---
+
+<Layout
+  title="Cabalgata Ecológica en Útica – Paseos a caballo | Horse Payo"
+  description="Cabalgata ecológica en Útica, Cundinamarca. Recorre senderos naturales a caballo con guías expertos. A solo 2 horas de Bogotá. Incluye almuerzo y piscina natural."
+  canonical="https://deportesextremoshorsepayo.com/cabalgata-ecologica/"
+  ogImage="https://deportesextremoshorsepayo.com/plan-cabalgata.jpg"
+>
+  <Navbar />
+  <Breadcrumbs items={[{ label: 'Cabalgata Ecológica' }]} />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <picture>
+          <source srcset="/plan-cabalgata.webp" type="image/webp" />
+          <source srcset="/plan-cabalgata.jpg" type="image/jpeg" />
+          <img src="/plan-cabalgata.jpg" alt="Cabalgata ecológica en Útica – Horse Payo" class="w-full h-full object-cover object-center" width="1600" height="900" loading="eager" fetchpriority="high" decoding="async" />
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 bg-accent/90 text-primary-dark text-sm font-bold px-4 py-2 rounded-full mb-6">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Útica, Cundinamarca
+          </div>
+          <h1 class="text-white font-heading font-black text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6">
+            Cabalgata <span class="text-accent">Ecológica</span>
+          </h1>
+          <p class="text-white/80 text-lg sm:text-xl font-body max-w-xl mb-8">
+            Recorre senderos naturales a caballo con guías que comparten la historia local. Una experiencia de conexión con la naturaleza a solo 2 horas de Bogotá.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20cabalgata%20ecol%C3%B3gica%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="bg-accent text-primary-dark font-bold px-8 py-4 rounded-full hover:bg-accent-dark transition-all duration-300 hover:scale-105 shadow-xl text-base inline-flex items-center gap-3">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+              Reservar Cabalgata Ahora
+            </a>
+            <a href="#info-cabalgata" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-full hover:bg-white hover:text-primary-dark transition-all duration-300 inline-flex items-center gap-2">
+              Más información
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info section -->
+    <section id="info-cabalgata" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="section-tag reveal">CABALGATA ECOLÓGICA</span>
+            <h2 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mt-4 mb-6 leading-tight reveal reveal-delay-1">
+              Conecta con la naturaleza a <span class="text-primary">caballo</span>
+            </h2>
+            <div class="space-y-4 text-gray-600 font-body leading-relaxed reveal reveal-delay-2">
+              <p>
+                Nuestra cabalgata ecológica es una experiencia única para conectar con la naturaleza. Recorremos senderos rodeados de montañas, ríos y cascadas, con guías locales que te compartirán la historia y tradiciones de Útica.
+              </p>
+              <p>
+                Los caballos son <strong>dóciles y entrenados</strong>, aptos tanto para principiantes como para jinetes experimentados. Cada salida incluye instrucciones básicas de monta y equipo de seguridad completo.
+              </p>
+              <p>
+                La cabalgata está incluida en nuestros <strong>Planes Pasadía 5 y 6</strong>, combinable con canopy, torrentismo y cuatrimotos.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3 mt-8 reveal reveal-delay-3">
+              <span class="badge-activity"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Caballos dóciles</span>
+              <span class="badge-activity"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Guías locales</span>
+              <span class="badge-activity"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Equipo de seguridad</span>
+              <span class="badge-activity"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Todos los niveles</span>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="rounded-3xl overflow-hidden shadow-2xl">
+              <picture>
+                <source srcset="/plan-cabalgata.webp" type="image/webp" />
+                <source srcset="/plan-cabalgata.jpg" type="image/jpeg" />
+                <img src="/plan-cabalgata.jpg" alt="Cabalgata ecológica en Útica, Cundinamarca" class="w-full h-[500px] object-cover object-center" width="800" height="500" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans that include cabalgata -->
+    <section class="py-24 bg-forest-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mb-4 reveal">
+            Planes con Cabalgata incluida
+          </h2>
+          <p class="text-gray-500 max-w-xl mx-auto font-body reveal reveal-delay-1">
+            La cabalgata ecológica está disponible en nuestros planes combinados.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 reveal">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+              <span class="font-display text-3xl text-primary">5</span>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Plan Pasadía 5</h3>
+            <p class="text-gray-500 text-sm mb-4">Cabalgata + Canopy</p>
+            <p class="text-3xl font-black text-primary-dark mb-4">$98.000</p>
+            <ul class="space-y-2 mb-6 text-sm text-gray-600">
+              <li class="flex items-center gap-2">✅ Cabalgata ecológica</li>
+              <li class="flex items-center gap-2">✅ Canopy zip line</li>
+              <li class="flex items-center gap-2">✅ Paseo por cascadas</li>
+              <li class="flex items-center gap-2">✅ Almuerzo + Piscina</li>
+            </ul>
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%205%20(Cabalgata%20%2B%20Canopy)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
+              Reservar
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg ring-2 ring-accent reveal reveal-delay-1">
+            <div class="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mb-4">
+              <span class="font-display text-3xl text-accent-dark">6</span>
+            </div>
+            <span class="bg-accent text-primary-dark text-xs font-black px-3 py-1 rounded-full tracking-wide mb-3 inline-block">⭐ MÁS POPULAR</span>
+            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Plan Pasadía 6</h3>
+            <p class="text-gray-500 text-sm mb-4">Aventura Completa</p>
+            <p class="text-3xl font-black text-primary-dark mb-4">$113.000</p>
+            <ul class="space-y-2 mb-6 text-sm text-gray-600">
+              <li class="flex items-center gap-2">✅ Canopy + Torrentismo</li>
+              <li class="flex items-center gap-2">✅ Cabalgata + Cuatrimotos</li>
+              <li class="flex items-center gap-2">✅ Almuerzo + Fotos</li>
+              <li class="flex items-center gap-2">✅ Equipo premium</li>
+            </ul>
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%206%20(Aventura%20Completa)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-accent text-primary-dark font-bold py-3 rounded-xl hover:bg-accent-dark transition-all duration-300 inline-flex items-center justify-center gap-2">
+              Reservar
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-accent relative overflow-hidden">
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-accent-light/40"></div>
+        <div class="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-accent-dark/20"></div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+        <h2 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-primary-dark mb-4 reveal">
+          ¿Listo para cabalgar?
+        </h2>
+        <p class="text-primary-dark/70 text-lg font-body max-w-xl mx-auto mb-10 reveal reveal-delay-1">
+          Reserva tu cabalgata ecológica hoy y vive una experiencia inolvidable.
+        </p>
+        <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20cabalgata%20ecol%C3%B3gica%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="bg-primary-dark text-white font-bold px-10 py-4 rounded-full inline-flex items-center gap-3 hover:bg-primary transition-all duration-300 hover:scale-105 shadow-xl text-lg reveal reveal-delay-2">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+          Reservar Cabalgata
+        </a>
+      </div>
+    </section>
+
+    <FormContacto />
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+</Layout>
