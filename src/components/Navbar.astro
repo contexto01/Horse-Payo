@@ -6,13 +6,19 @@ const navLinks = [
   { label: 'Testimonios', href: '/#testimonios' },
   { label: 'Contacto', href: '/#contacto' }
 ]
+
+const logoHref = Astro.url.pathname === '/' ? '/#inicio' : '/'
 ---
 
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4" aria-label="Navegación principal">
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4"
+  aria-label="Navegación principal"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <a href="#inicio" class="flex items-center gap-2.5 group">
+      <a href={logoHref} class="flex items-center gap-2.5 group">
         <picture>
           <source srcset="/hp-logo.webp" type="image/webp" />
           <img
