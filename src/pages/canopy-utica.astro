@@ -2,16 +2,15 @@
 import Layout from '../layouts/Layout.astro'
 import Breadcrumbs from '../components/Breadcrumbs.astro'
 import Navbar from '../components/Navbar.astro'
-import FormContacto from '../components/FormContacto.astro'
 import Footer from '../components/Footer.astro'
 import WhatsAppFloat from '../components/WhatsAppFloat.astro'
 ---
 
 <Layout
-  title="Canopy en Útica Cundinamarca – Vuela entre árboles | Horse Payo"
-  description="Canopy extremo en Útica, Cundinamarca. 🦅 Vuela a más de 100m de altura con vistas panorámicas del valle. Guías certificados, equipo de seguridad. Desde $190.000 por persona."
+  title="Canopy Útica | Circuito Extremo 5 Estaciones + Cabalgata | Desde $190.000"
+  description="Pasadía 6: Cabalgata ecológica + Circuito Canopy completo (Puente Indiana, Tibetano, Himalaya, Vuelos 300m, Rapel). Almuerzo incluido. Guías certificados, equipo premium, seguro. 2h Bogotá. Parqueadero gratis."
   canonical="https://deportesextremoshorsepayo.com/canopy-utica/"
-  ogImage="https://deportesextremoshorsepayo.com/hero.jpg"
+  ogImage="https://deportesextremoshorsepayo.com/hero-canopy.jpg"
 >
   <Navbar />
   <Breadcrumbs items={[{ label: 'Canopy en Útica' }]} />
@@ -36,19 +35,54 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
           <h1 class="text-white font-heading font-black text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6">
             Canopy en <span class="text-accent">Útica</span>
           </h1>
-          <p class="text-white/80 text-lg sm:text-xl font-body max-w-xl mb-8">
-            🦅 ¡Vuela entre árboles a más de 100 metros de altura! Vive la experiencia de canopy más extrema de Cundinamarca, a solo 2 horas de Bogotá. 🌲✨
+          <p class="text-white/80 text-lg sm:text-xl font-body max-w-xl mb-6">
+            🦅 ¡Vuela a 100m+ de altura! Pasadía 6: Cabalgata ecológica + Circuito Canopy 5 estaciones (Puente Indiana, Tibetano, Himalaya, Vuelos 300m, Rapel al vacío). <strong>Desde $190.000</strong> todo incluido. A solo 2h de Bogotá por vía 100% pavimentada 🛣️✨
           </p>
           <div class="flex flex-wrap gap-4">
-            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20canopy%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="bg-accent text-primary-dark font-bold px-8 py-4 rounded-full hover:bg-accent-dark transition-all duration-300 hover:scale-105 shadow-xl text-base inline-flex items-center gap-3">
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%206%20(Cabalgata%20%2B%20Circuito%20Canopy%20%24190.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="bg-accent text-primary-dark font-bold px-8 py-4 rounded-full hover:bg-accent-dark transition-all duration-300 hover:scale-105 shadow-xl text-base inline-flex items-center gap-3" onclick="dataLayer.push({event:'cta_click',plan:'pasadia_6',price:190000})">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-              📲 Reservar mi Aventura Ahora
+              📲 Reservar Pasadía 6 Ahora
             </a>
             <a href="#info-canopy" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-full hover:bg-white hover:text-primary-dark transition-all duration-300 inline-flex items-center gap-2">
-              🔍 Más información
+              🔍 Ver todos los planes
             </a>
           </div>
         </div>
+        <!-- Urgency bar -->
+        <div class="flex flex-wrap items-center gap-4 mt-6 text-white/90 text-sm font-medium reveal reveal-delay-3">
+          <span class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20">
+            <svg class="w-4 h-4 text-accent animate-pulse" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <strong>Últimos 12 cupos</strong> esta semana
+          </span>
+          <span class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20">
+            <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Reserva hoy, paga al llegar
+          </span>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plan Entrada Real - Pasadía 6 -->
+    <section class="bg-gradient-to-r from-accent/10 to-primary/10 rounded-2xl p-6 md:p-8 mb-8 border border-accent/30 reveal mx-auto max-w-7xl px-4">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="text-center md:text-left">
+          <span class="badge-activity mb-3 inline-block">🎯 PLAN DESTACADO CANOPY</span>
+          <h2 class="font-heading font-black text-2xl md:text-3xl text-primary-dark mb-2">
+            Pasadía 6: Cabalgata + Circuito Canopy Completo <span class="text-accent">$190.000</span> / persona
+          </h2>
+          <p class="text-gray-600 font-body">Incluye: Cabalgata ecológica guiada + Circuito 5 estaciones (Indiana, Tibetano, Himalaya, Vuelos 300m, Rapel) + Equipo certificado + Guías expertos + Seguro accidentes + Almuerzo tradicional + Acceso instalaciones y piscina</p>
+        </div>
+        <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%206%20(Cabalgata%20%2B%20Circuito%20Canopy%20%24190.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto bg-primary-dark text-white font-bold py-4 px-8 rounded-full hover:bg-primary transition-all duration-300 hover:scale-105 shadow-xl inline-flex items-center justify-center gap-3 text-base" onclick="dataLayer.push({event:'cta_click',plan:'pasadia_6',price:190000})">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+          Reservar Pasadía 6 Ahora
+        </a>
+      </div>
+      <div class="flex flex-wrap gap-3 mt-6 justify-center md:justify-start pt-6 border-t border-accent/30">
+        <span class="badge-activity">🅿️ Parqueadero Vigilado GRATIS</span>
+        <span class="badge-activity">🛣️ Vía 100% Pavimentada 2h Bogotá</span>
+        <span class="badge-activity">🏅 Instalaciones Certificadas</span>
+        <span class="badge-activity">🛡️ Seguro Incluido</span>
       </div>
     </section>
 
@@ -75,6 +109,7 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
               <p>
                 Todo esto rodeado de árboles centenarios con vistas panorámicas de 360° del valle. 🌴🔥
               </p>
+              <p class="text-primary-dark font-semibold mt-4">💡 Este circuito está incluido en: Pasadía 6 ($190K), Pasadía 1 ($225K), Pasadía 2 ($230K), Pasadía 3 ($270K), Pasadía 5 ($350K), Pasadía 8 ($370K)</p>
             </div>
             <div class="flex flex-wrap gap-3 mt-8 reveal reveal-delay-3">
               <span class="badge-activity">🛡️ Guías Certificados</span>
@@ -96,6 +131,51 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
       </div>
     </section>
 
+    <!-- Trust Signals -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="section-tag reveal">🏆 POR QUÉ ELEGIRNOS</span>
+          <h2 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mt-4 mb-4 reveal reveal-delay-1">
+            ¿Por qué <span class="text-primary">Horse Payo</span>?
+          </h2>
+          <p class="text-gray-500 max-w-xl mx-auto font-body reveal reveal-delay-1">
+            Más de 10 años siendo el destino favorito de aventura en Cundinamarca
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center reveal">
+            <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <span class="text-3xl">🛡️</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-primary-dark mb-2">Seguridad Garantizada</h3>
+            <p class="text-gray-500 text-sm font-body leading-relaxed">Guías certificados con curso RCP + equipo internacional CE/UIAA. Seguro de accidentes incluido en todos los planes.</p>
+          </div>
+          <div class="text-center reveal reveal-delay-1">
+            <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <span class="text-3xl">🏔️</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-primary-dark mb-2">Escenario Natural Único</h3>
+            <p class="text-gray-500 text-sm font-body leading-relaxed">Instalaciones en 5 hectáreas de bosque con miradores al valle. Circuitos aéreos entre árboles centenarios.</p>
+          </div>
+          <div class="text-center reveal reveal-delay-2">
+            <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <span class="text-3xl">💵</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-primary-dark mb-2">Precios Justos, Sin Sorpresas</h3>
+            <p class="text-gray-500 text-sm font-body leading-relaxed">Desde $190.000 todo incluido: actividades, equipo, guías, seguro, almuerzo y parqueadero. Sin cargos ocultos.</p>
+          </div>
+          <div class="text-center reveal reveal-delay-3">
+            <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <span class="text-3xl">📍</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-primary-dark mb-2">Cerca de Bogotá</h3>
+            <p class="text-gray-500 text-sm font-body leading-relaxed">Solo 2h por vía 100% pavimentada. Parqueadero vigilado GRATIS. Ideal para plan de fin de semana sin estrés.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Plans that include canopy -->
     <section class="py-24 bg-forest-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -108,61 +188,121 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 reveal">
+          <div class="bg-white rounded-2xl p-6 shadow-lg ring-2 ring-accent reveal">
+            <span class="bg-accent text-primary-dark text-xs font-black px-3 py-1 rounded-full tracking-wide mb-3 inline-block">🎯 MEJOR PRECIO</span>
             <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
               <span class="font-display text-3xl text-primary">🧗</span>
             </div>
-            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Plan Pasadía 6 🧗‍♂️</h3>
-            <p class="text-gray-500 text-sm mb-4">Combinado Clásico</p>
+            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Pasadía 6</h3>
+            <p class="text-gray-500 text-sm mb-4">Cabalgata + Circuito Extremo</p>
             <p class="text-3xl font-black text-primary-dark mb-4">$190.000 <span class="text-base font-normal text-gray-400">/ persona</span></p>
             <ul class="space-y-2 mb-6 text-sm text-gray-600">
               <li class="flex items-center gap-2">🏇 Cabalgata Ecológica Guiada</li>
-              <li class="flex items-center gap-2">🧗‍♂️ Circuito Extremo Completo (Canopy, Puentes y Rapel)</li>
-              <li class="flex items-center gap-2">🍲 Almuerzo Tradicional Incluido</li>
-              <li class="flex items-center gap-2">🎟️ Ingreso a las instalaciones</li>
+              <li class="flex items-center gap-2">🧗‍♂️ Circuito Extremo (Canopy, Puentes y Rapel)</li>
+              <li class="flex items-center gap-2">🍲 Almuerzo Tradicional</li>
+              <li class="flex items-center gap-2">🎟️ Ingreso instalaciones + Piscina</li>
+              <li class="flex items-center gap-2">🅿️ Parqueadero vigilado</li>
             </ul>
-            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%206%20(Combinado%20Cl%C3%A1sico)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
-              ⚡ Reservar Plan
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%206%20(Cabalgata%20%2B%20Circuito%20%24190.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-accent text-primary-dark font-bold py-3 rounded-xl hover:bg-accent-dark transition-all duration-300 inline-flex items-center justify-center gap-2">
+              ⚡ Reservar Pasadía 6
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
           </div>
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 reveal reveal-delay-1">
             <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+              <span class="font-display text-3xl text-primary">🌊</span>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Pasadía 1</h3>
+            <p class="text-gray-500 text-sm mb-4">Rafting + Cabalgata + Circuito</p>
+            <p class="text-3xl font-black text-primary-dark mb-4">$225.000 <span class="text-base font-normal text-gray-400">/ persona</span></p>
+            <ul class="space-y-2 mb-6 text-sm text-gray-600">
+              <li class="flex items-center gap-2">🌊 Rafting Extremo (Descenso + Minitren)</li>
+              <li class="flex items-center gap-2">🏇 Cabalgata Ecológica Guiada</li>
+              <li class="flex items-center gap-2">🧗‍♂️ Circuito Extremo (Canopy, Puentes y Rapel)</li>
+              <li class="flex items-center gap-2">🍲 Almuerzo Tradicional</li>
+              <li class="flex items-center gap-2">🎟️ Ingreso instalaciones + Piscina</li>
+            </ul>
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%201%20(Rafting%20%2B%20Cabalgata%20%2B%20Circuito%20%24225.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
+              ⚡ Reservar Pasadía 1
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 reveal reveal-delay-2">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
               <span class="font-display text-3xl text-primary">🏎️</span>
             </div>
-            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Plan Pasadía 2 🏎️💨</h3>
-            <p class="text-gray-500 text-sm mb-4">Adrenalina Terrestre</p>
+            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Pasadía 2</h3>
+            <p class="text-gray-500 text-sm mb-4">Cuatrimoto + Cabalgata + Circuito</p>
             <p class="text-3xl font-black text-primary-dark mb-4">$230.000 <span class="text-base font-normal text-gray-400">/ persona</span></p>
             <ul class="space-y-2 mb-6 text-sm text-gray-600">
               <li class="flex items-center gap-2">🚜 Ruta en Cuatrimoto Todo Terreno</li>
               <li class="flex items-center gap-2">🏇 Cabalgata Ecológica</li>
-              <li class="flex items-center gap-2">🧗‍♂️ Circuito Extremo Completo (Canopy, Puentes y Rapel)</li>
-              <li class="flex items-center gap-2">🍲 Almuerzo Tradicional Incluido</li>
-              <li class="flex items-center gap-2">🎟️ Ingreso a las instalaciones</li>
+              <li class="flex items-center gap-2">🧗‍♂️ Circuito Extremo (Canopy, Puentes y Rapel)</li>
+              <li class="flex items-center gap-2">🍲 Almuerzo Tradicional</li>
+              <li class="flex items-center gap-2">🎟️ Ingreso instalaciones + Piscina</li>
             </ul>
-            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%202%20(Adrenalina%20Terrestre)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
-              ⚡ Reservar Plan
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%202%20(Cuatrimoto%20%2B%20Cabalgata%20%2B%20Circuito%20%24230.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
+              ⚡ Reservar Pasadía 2
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 reveal reveal-delay-1">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+              <span class="font-display text-3xl text-accent-dark">🌊</span>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Pasadía 3</h3>
+            <p class="text-gray-500 text-sm mb-4">Rafting + Cabalgata + Circuito</p>
+            <p class="text-3xl font-black text-primary-dark mb-4">$270.000 <span class="text-base font-normal text-gray-400">/ persona</span></p>
+            <ul class="space-y-2 mb-6 text-sm text-gray-600">
+              <li class="flex items-center gap-2">🌊 Rafting Extremo (Descenso + Minitren)</li>
+              <li class="flex items-center gap-2">🏇 Cabalgata Ecológica Guiada</li>
+              <li class="flex items-center gap-2">🧗‍♂️ Circuito Extremo (Canopy, Puentes y Rapel)</li>
+              <li class="flex items-center gap-2">🍲 Almuerzo Tradicional</li>
+              <li class="flex items-center gap-2">🎟️ Ingreso instalaciones + Piscina</li>
+            </ul>
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%203%20(Rafting%20%2B%20Cabalgata%20%2B%20Circuito%20%24270.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
+              ⚡ Reservar Pasadía 3
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
           </div>
           <div class="bg-white rounded-2xl p-6 shadow-lg ring-2 ring-accent reveal reveal-delay-2">
+            <span class="bg-accent text-primary-dark text-xs font-black px-3 py-1 rounded-full tracking-wide mb-3 inline-block">🏆 MÁS POPULAR</span>
             <div class="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mb-4">
               <span class="font-display text-3xl text-accent-dark">🏆</span>
             </div>
-            <span class="bg-accent text-primary-dark text-xs font-black px-3 py-1 rounded-full tracking-wide mb-3 inline-block">🏆 MÁS POPULAR</span>
-            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Plan Pasadía 5 🏆</h3>
-            <p class="text-gray-500 text-sm mb-4">Aventura Total Extrema</p>
+            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Pasadía 5</h3>
+            <p class="text-gray-500 text-sm mb-4">Aventura Total: Cuatri + Rafting + Circuito</p>
             <p class="text-3xl font-black text-primary-dark mb-4">$350.000 <span class="text-base font-normal text-gray-400">/ persona</span></p>
             <ul class="space-y-2 mb-6 text-sm text-gray-600">
               <li class="flex items-center gap-2">🚜 Ruta en Cuatrimoto Todo Terreno</li>
+              <li class="flex items-center gap-2">🌊 Rafting Extremo (Descenso + Minitren)</li>
               <li class="flex items-center gap-2">🏇 Cabalgata Ecológica</li>
-              <li class="flex items-center gap-2">🌊 Rafting Extremo (Descenso en balsa + Minitren)</li>
-              <li class="flex items-center gap-2">🧗‍♂️ Circuito Extremo Completo (Canopy, Puentes y Rapel)</li>
-              <li class="flex items-center gap-2">🍲 Almuerzo Tradicional Incluido</li>
-              <li class="flex items-center gap-2">🎟️ Ingreso a las instalaciones</li>
+              <li class="flex items-center gap-2">🧗‍♂️ Circuito Extremo (Canopy, Puentes y Rapel)</li>
+              <li class="flex items-center gap-2">🍲 Almuerzo Tradicional</li>
+              <li class="flex items-center gap-2">🎟️ Ingreso instalaciones + Piscina</li>
             </ul>
-            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%205%20(Aventura%20Total%20Extrema)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-accent text-primary-dark font-bold py-3 rounded-xl hover:bg-accent-dark transition-all duration-300 inline-flex items-center justify-center gap-2">
-              📲 Reservar mi Aventura Ahora
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%205%20(Aventura%20Total%20%24350.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-accent text-primary-dark font-bold py-3 rounded-xl hover:bg-accent-dark transition-all duration-300 inline-flex items-center justify-center gap-2">
+              📲 Reservar mi Aventura
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 reveal reveal-delay-1">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+              <span class="font-display text-3xl text-primary">🦅</span>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-primary-dark mb-2">Pasadía 8</h3>
+            <p class="text-gray-500 text-sm mb-4">Experiencia Premium: Todo incluido</p>
+            <p class="text-3xl font-black text-primary-dark mb-4">$370.000 <span class="text-base font-normal text-gray-400">/ persona</span></p>
+            <ul class="space-y-2 mb-6 text-sm text-gray-600">
+              <li class="flex items-center gap-2">🦅 Vuelo del Pájaro (Tirolesa larga panorámica)</li>
+              <li class="flex items-center gap-2">🌊 Rafting Extremo (Descenso + Minitren)</li>
+              <li class="flex items-center gap-2">🧗‍♂️ Circuito Extremo (Canopy, Puentes y Rapel)</li>
+              <li class="flex items-center gap-2">🏇 Cabalgata Ecológica</li>
+              <li class="flex items-center gap-2">🍲 Almuerzo Tradicional</li>
+              <li class="flex items-center gap-2">🎟️ Ingreso instalaciones + Piscina</li>
+            </ul>
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%208%20(Premium%20%24370.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
+              ⚡ Reservar Pasadía 8
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
           </div>
@@ -190,7 +330,108 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
       </div>
     </section>
 
-    <FormContacto />
+    <!-- Reserva Rápida WhatsApp -->
+    <section class="py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="section-tag reveal">📲 RESERVA RÁPIDA</span>
+        <h2 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mt-4 mb-4 reveal reveal-delay-1">
+          Reserva tu Canopy en <span class="text-primary">2 Minutos</span>
+        </h2>
+        <p class="text-gray-500 max-w-xl mx-auto font-body mb-12 reveal reveal-delay-1">
+          Elige el plan que más te guste y escríbenos directo a WhatsApp. ¡Reserva hoy y paga al llegar!
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto reveal reveal-delay-2">
+          <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%206%20(Cabalgata%20%2B%20Circuito%20%24190.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="group bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-6 rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            Pasadía 6 - $190K
+          </a>
+          <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%201%20(Rafting%20%2B%20Cabalgata%20%2B%20Circuito%20%24225.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="group bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-6 rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            Pasadía 1 - $225K
+          </a>
+          <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%202%20(Cuatrimoto%20%2B%20Cabalgata%20%2B%20Circuito%20%24230.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="group bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-6 rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            Pasadía 2 - $230K
+          </a>
+          <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%203%20(Rafting%20%2B%20Cabalgata%20%2B%20Circuito%20%24270.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="group bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-6 rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            Pasadía 3 - $270K
+          </a>
+          <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%205%20(Aventura%20Total%20%24350.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="group bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-6 rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg ring-2 ring-white/50">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            Pasadía 5 - $350K 🏆
+          </a>
+          <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20Pasad%C3%ADa%208%20(Premium%20%24370.000)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" class="group bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-6 rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            Pasadía 8 - $370K
+          </a>
+        </div>
+        <p class="text-gray-400 text-sm mt-8 reveal reveal-delay-3">✅ Reserva hoy, paga al llegar. Cancelación gratuita 24h antes.</p>
+      </div>
+    </section>
+
+    <!-- Product + FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Pasadía 6 - Cabalgata + Circuito Canopy Útica",
+          "description": "Cabalgata ecológica guiada + Circuito Extremo completo (Puente Indiana, Tibetano, Himalaya, Canopy vuelos 300m, Rapel al vacío). Incluye almuerzo tradicional, ingreso a instalaciones, piscina, parqueadero vigilado. Guías certificados, seguro de accidentes.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Horse Payo"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "190000",
+            "priceCurrency": "COP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://deportesextremoshorsepayo.com/canopy-utica/"
+          },
+          "image": "https://deportesextremoshorsepayo.com/hero-canopy.jpg"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuánto cuesta el canopy en Útica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El Pasadía 6 (Cabalgata + Circuito Canopy completo) tiene un valor de $190.000 por persona, incluye guías, equipo, seguro, almuerzo y parqueadero."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué incluye la experiencia de canopy en Horse Payo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Incluye circuito completo de 5 estaciones: Puente Indiana, Puente Tibetano, Desafío Himalaya, Canopy extremo con vuelos de hasta 300m, y Rapel al vacío. También incluye cabalgata ecológica, almuerzo tradicional, ingreso a piscina y parqueadero vigilado."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto tiempo dura el canopy en Útica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La experiencia completa del Pasadía 6 dura aproximadamente 4-5 horas, incluyendo cabalgata, circuito extremo y almuerzo. Recomendamos llegar temprano para disfrutar al máximo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué tan lejos está Horse Payo de Bogotá?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Horse Payo está ubicado en Útica, Cundinamarca, a solo 2 horas de Bogotá por vía 100% pavimentada. Hay parqueadero vigilado gratuito en el lugar."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </main>
 
   <Footer />
