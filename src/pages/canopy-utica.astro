@@ -19,11 +19,7 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
     <!-- Hero -->
     <section class="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden pt-20 lg:pt-24">
       <div class="absolute inset-0 z-0">
-        <picture>
-          <source srcset="/hero.webp" type="image/webp" />
-          <source srcset="/hero.jpg" type="image/jpeg" />
-          <img src="/hero.jpg" alt="Canopy en Útica – Horse Payo" class="w-full h-full object-cover object-center" width="1600" height="900" loading="eager" fetchpriority="high" decoding="async" />
-        </picture>
+        <img src="/Canopy3.webp" alt="Canopy en Útica – Horse Payo" class="w-full h-full object-cover object-center" width="1600" height="900" loading="eager" fetchpriority="high" decoding="async" />
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
       </div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -118,13 +114,9 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
               <span class="badge-activity">📸 Vista 360° del Valle</span>
             </div>
           </div>
-          <div class="reveal reveal-delay-2">
-            <div class="rounded-3xl overflow-hidden shadow-2xl">
-              <picture>
-                <source srcset="/hero.webp" type="image/webp" />
-                <source srcset="/hero.jpg" type="image/jpeg" />
-                <img src="/hero.jpg" alt="Canopy extremo en Útica, Cundinamarca" class="w-full h-[500px] object-cover object-center" width="800" height="500" loading="lazy" decoding="async" />
-              </picture>
+          <div class="reveal reveal-delay-2 flex justify-center">
+            <div class="rounded-3xl overflow-hidden shadow-2xl max-w-xs w-full">
+              <video src="/CanopyVideo.mp4" poster="/Canopy3.webp" autoplay muted loop playsinline class="w-full h-auto align-middle" aria-label="Canopy extremo en Útica, Cundinamarca"></video>
             </div>
           </div>
         </div>
