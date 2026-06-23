@@ -124,6 +124,9 @@ const waNumber = '573228837910'
   form?.addEventListener('submit', (e) => {
     e.preventDefault()
 
+    fbq('track', 'Lead', {content_name: 'Formulario Contacto', currency: 'COP'})
+    fbq('track', 'Contact', {content_name: 'Formulario Contacto', content_category: 'contact'})
+
     const formData = new FormData(form)
     const nombre = formData.get('nombre')?.toString().trim() || ''
     const telefono = formData.get('telefono')?.toString().trim() || ''

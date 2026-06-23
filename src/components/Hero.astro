@@ -86,6 +86,7 @@
           href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20un%20plan%20en%20Horse%20Payo"
           target="_blank"
           rel="noopener noreferrer"
+          onclick="fbq('track', 'InitiateCheckout', {content_name: 'Hero CTA', currency: 'COP', value: 93000})"
           class="btn-primary text-base"
         >
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -95,7 +96,7 @@
           </svg>
           Reserva Ahora
         </a>
-        <a href="#planes" class="btn-outline text-base"> Ver Planes </a>
+        <a href="#planes" onclick="fbq('track', 'ViewContent', {content_name: 'Ver Planes', content_category: 'navigation'})" class="btn-outline text-base"> Ver Planes </a>
       </div>
     </div>
   </div>

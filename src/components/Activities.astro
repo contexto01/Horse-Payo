@@ -98,6 +98,7 @@ const activities = [
         return (
           <Tag
             {...extraProps}
+            onclick={`fbq('track', 'ViewContent', {content_name: '${activity.name}', content_category: 'activity'})`}
             class={`flex flex-col items-center text-center group cursor-pointer reveal reveal-delay-${i + 1}`}
           >
             <!-- Icon circle -->
@@ -123,6 +124,7 @@ const activities = [
         href="https://wa.me/573228837910?text=Hola!%20Quiero%20saber%20más%20sobre%20las%20actividades%20de%20Horse%20Payo"
         target="_blank"
         rel="noopener noreferrer"
+        onclick="fbq('track', 'Contact', {content_name: 'Activities CTA', content_category: 'contact'})"
         class="inline-flex items-center gap-2 bg-primary-dark text-white font-bold px-8 py-4 rounded-full hover:bg-primary transition-all duration-300 hover:scale-105 shadow-xl"
       >
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
