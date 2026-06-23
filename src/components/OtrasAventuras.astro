@@ -1,0 +1,114 @@
+---
+export interface Adventure {
+  title: string
+  description: string
+  href: string
+  icon: string
+  priceFrom: string
+}
+
+export interface Props {
+  excludeHref?: string
+  variant?: 'light' | 'forest'
+}
+
+const { excludeHref, variant = 'forest' } = Astro.props
+
+const allAdventures: Adventure[] = [
+  {
+    title: 'Canopy en Útica',
+    description: 'Circuito extremo de 5 estaciones: Puente Indiana, Tibetano, Himalaya, vuelos de 300m y rapel al vacío.',
+    href: '/canopy-utica/',
+    icon: '🦅',
+    priceFrom: 'Desde $190.000'
+  },
+  {
+    title: 'Rafting en Útica',
+    description: 'Descenso en balsa por rápidos del río con recorrido en minitren artesanal.',
+    href: '/rafting-utica/',
+    icon: '🌊',
+    priceFrom: 'Desde $225.000'
+  },
+  {
+    title: 'Cabalgata Ecológica',
+    description: 'Paseo a caballo guiado por senderos naturales con caballos dóciles y entrenados.',
+    href: '/cabalgata-ecologica/',
+    icon: '🐴',
+    priceFrom: 'Desde $190.000'
+  },
+  {
+    title: 'Cuatrimotos 4x4',
+    description: 'Rutas en cuatrimoto automática por senderos de montaña con inducción y equipo completo.',
+    href: '/cuatrimotos-utica/',
+    icon: '🏍️',
+    priceFrom: 'Desde $230.000'
+  },
+  {
+    title: 'Torrentismo',
+    description: 'Descenso de cascadas naturales de hasta 30m con instructores certificados en rescate vertical.',
+    href: '/torrentismo-utica/',
+    icon: '⛰️',
+    priceFrom: 'Desde $280.000'
+  }
+]
+
+const adventures = allAdventures.filter((a) => a.href !== excludeHref).slice(0, 4)
+
+const bgClass = variant === 'forest' ? 'bg-forest-50' : 'bg-white'
+---
+
+<section class={`py-20 ${bgClass}`} aria-labelledby="otras-aventuras-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="section-tag reveal">MÁS AVENTURAS</span>
+      <h2
+        id="otras-aventuras-heading"
+        class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mt-4 mb-4 reveal reveal-delay-1"
+      >
+        Otras aventuras en <span class="text-primary">Horse Payo</span>
+      </h2>
+      <p class="text-gray-500 max-w-xl mx-auto font-body reveal reveal-delay-2">
+        Combina actividades y vive la experiencia completa del ecoturismo en Útica, Cundinamarca.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        adventures.map((adv, i) => (
+          <a
+            href={adv.href}
+            class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 reveal"
+            style={`transition-delay: ${(i + 1) * 0.1}s`}
+            aria-label={`Ver ${adv.title} – ${adv.priceFrom}`}
+          >
+            <div class="p-6">
+              <div class="text-4xl mb-3" aria-hidden="true">{adv.icon}</div>
+              <h3 class="font-heading font-bold text-lg text-primary-dark mb-2 group-hover:text-primary transition-colors">
+                {adv.title}
+              </h3>
+              <p class="text-gray-500 text-sm font-body leading-relaxed mb-4">
+                {adv.description}
+              </p>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                <span class="text-xs font-bold text-primary">{adv.priceFrom}</span>
+                <span class="text-primary-dark group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="text-center mt-10 reveal">
+      <a
+        href="/#actividades"
+        class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors border-b-2 border-primary/30 hover:border-primary pb-0.5"
+      >
+        Ver todas las actividades
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
