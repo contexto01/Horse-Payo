@@ -19,11 +19,7 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
     <!-- Hero -->
     <section class="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden pt-20 lg:pt-24">
       <div class="absolute inset-0 z-0">
-        <picture>
-          <source srcset="/plan-rafting.webp" type="image/webp" />
-          <source srcset="/plan-rafting.jpg" type="image/jpeg" />
-          <img src="/plan-rafting.jpg" alt="Rafting en Útica – Horse Payo" class="w-full h-full object-cover object-center" width="1600" height="900" loading="eager" fetchpriority="high" decoding="async" />
-        </picture>
+        <video src="/RaftingPanoramicaVideo.mp4" autoplay muted loop playsinline class="w-full h-full object-cover object-center" aria-label="Rafting panorámico en Útica, Cundinamarca"></video>
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
       </div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -116,11 +112,7 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
           </div>
           <div class="reveal reveal-delay-2">
             <div class="rounded-3xl overflow-hidden shadow-2xl">
-              <picture>
-                <source srcset="/plan-rafting.webp" type="image/webp" />
-                <source srcset="/plan-rafting.jpg" type="image/jpeg" />
-                <img src="/plan-rafting.jpg" alt="Rafting extremo en Útica, Cundinamarca" class="w-full h-[500px] object-cover object-center" width="800" height="500" loading="lazy" decoding="async" />
-              </picture>
+              <video src="/RaftingVideo.mp4" poster="/plan-rafting.webp" autoplay muted loop playsinline class="w-full h-[500px] object-cover object-center" aria-label="Rafting extremo en Útica, Cundinamarca"></video>
             </div>
           </div>
         </div>
@@ -167,6 +159,35 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
             </div>
             <h3 class="font-heading font-bold text-lg text-primary-dark mb-2">Cerca de Bogotá</h3>
             <p class="text-gray-500 text-sm font-body leading-relaxed">Solo 2h por vía 100% pavimentada. Parqueadero vigilado GRATIS. Ideal para plan de fin de semana sin estrés.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería Rafting -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="section-tag reveal">📸 GALERÍA</span>
+          <h2 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mt-4 mb-4 reveal reveal-delay-1">
+            Rafting en <span class="text-primary">acción</span>
+          </h2>
+          <p class="text-gray-500 max-w-xl mx-auto font-body reveal reveal-delay-1">
+            Momentos inolvidables en los rápidos de Útica
+          </p>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="rounded-2xl overflow-hidden shadow-lg reveal">
+            <img src="/Rafting-galeria-1.jpeg" alt="Rafting en Útica 1" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg reveal reveal-delay-1">
+            <img src="/Rafting-galeria-2.jpeg" alt="Rafting en Útica 2" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg reveal reveal-delay-2">
+            <img src="/Rafting-galeria-3.jpeg" alt="Rafting en Útica 3" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg reveal reveal-delay-3">
+            <img src="/Rafting-galeria-4.jpeg" alt="Rafting en Útica 4" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
         </div>
       </div>
