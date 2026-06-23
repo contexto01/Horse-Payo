@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://deportesextremoshorsepayo.com/sitemap.xml
+Sitemap: https://deportesextremoshorsepayo.com/sitemap-index.xml
