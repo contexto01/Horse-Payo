@@ -1,0 +1,165 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Breadcrumbs from '../../components/Breadcrumbs.astro'
+import Navbar from '../../components/Navbar.astro'
+import Footer from '../../components/Footer.astro'
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro'
+import OtrasAventuras from '../../components/OtrasAventuras.astro'
+import { getCollection, type CollectionEntry } from 'astro:content'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog')
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }))
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>
+}
+
+const { post } = Astro.props
+const { Content } = await post.render()
+
+const formatDate = (date: Date) =>
+  new Intl.DateTimeFormat('es-CO', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date)
+
+const postUrl = `https://deportesextremoshorsepayo.com/blog/${post.slug}/`
+
+const blogPostSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  image: post.data.image ? `https://deportesextremoshorsepayo.com${post.data.image}` : undefined,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate || post.data.pubDate).toISOString(),
+  author: {
+    '@type': 'Organization',
+    name: post.data.author,
+    url: 'https://deportesextremoshorsepayo.com/'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Horse Payo',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://deportesextremoshorsepayo.com/logo.webp'
+    }
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': postUrl
+  },
+  keywords: post.data.tags.join(', ')
+}
+---
+
+<Layout
+  title={`${post.data.title} | Blog Horse Payo`}
+  description={post.data.description}
+  canonical={postUrl}
+  ogImage={post.data.image ? `https://deportesextremoshorsepayo.com${post.data.image}` : undefined}
+>
+  <Navbar />
+  <Breadcrumbs items={[{ label: 'Blog', href: '/blog/' }, { label: post.data.title }]} />
+
+  <main>
+    <article class="pt-32 pb-16 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        {post.data.tags.length > 0 && (
+          <div class="flex flex-wrap gap-2 mb-6 reveal">
+            {post.data.tags.map((tag) => (
+              <span class="badge-activity">{tag}</span>
+            ))}
+          </div>
+        )}
+
+        <h1 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark leading-tight mb-6 reveal reveal-delay-1">
+          {post.data.title}
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-10 reveal reveal-delay-2">
+          <time datetime={post.data.pubDate.toISOString()}>
+            {formatDate(post.data.pubDate)}
+          </time>
+          {post.data.readingTime && (
+            <>
+              <span aria-hidden="true">·</span>
+              <span>{post.data.readingTime} de lectura</span>
+            </>
+          )}
+          <span aria-hidden="true">·</span>
+          <span>Por {post.data.author}</span>
+        </div>
+
+        {post.data.image && (
+          <div class="rounded-3xl overflow-hidden shadow-2xl mb-12 reveal reveal-delay-3">
+            <img
+              src={post.data.image}
+              alt={post.data.imageAlt || post.data.title}
+              class="w-full h-auto object-cover"
+              width="1200"
+              height="675"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+        )}
+
+        <div class="prose prose-lg max-w-none font-body text-gray-700 leading-relaxed reveal reveal-delay-3
+          [&_h2]:font-heading [&_h2]:text-3xl [&_h2]:font-black [&_h2]:text-primary-dark [&_h2]:mt-12 [&_h2]:mb-4
+          [&_h3]:font-heading [&_h3]:text-2xl [&_h3]:font-bold [&_h3]:text-primary-dark [&_h3]:mt-8 [&_h3]:mb-3
+          [&_p]:mb-4
+          [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_ul_li]:mb-2
+          [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-4
+          [&_a]:text-primary [&_a]:font-semibold [&_a]:hover:text-primary-dark [&_a]:underline
+          [&_strong]:text-primary-dark [&_strong]:font-bold
+          [&_table]:w-full [&_table]:my-6 [&_table]:border-collapse
+          [&_th]:bg-forest-50 [&_th]:p-3 [&_th]:text-left [&_th]:font-bold [&_th]:border [&_th]:border-gray-200
+          [&_td]:p-3 [&_td]:border [&_td]:border-gray-200
+          [&_blockquote]:border-l-4 [&_blockquote]:border-primary [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-gray-600 [&_blockquote]:my-6">
+          <Content />
+        </div>
+
+        <div class="mt-16 p-8 bg-forest-50 rounded-2xl border border-forest-100 reveal">
+          <h3 class="font-heading font-black text-2xl text-primary-dark mb-3">
+            ¿Listo para vivir la aventura?
+          </h3>
+          <p class="text-gray-600 font-body mb-6">
+            Reserva tu plan en Horse Payo y vive la experiencia completa de ecoturismo en Útica, Cundinamarca.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20un%20plan%20en%20Horse%20Payo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-accent text-primary-dark font-bold px-6 py-3 rounded-full hover:bg-accent-dark transition-all duration-300 inline-flex items-center gap-2"
+            >
+              💬 Reservar por WhatsApp
+            </a>
+            <a
+              href="/#planes"
+              class="border-2 border-primary text-primary font-semibold px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center gap-2"
+            >
+              Ver planes
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <OtrasAventuras variant="light" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostSchema)} />
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+</Layout>

@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+import WhatsAppFloat from '../components/WhatsAppFloat.astro'
+import { getCollection } from 'astro:content'
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+
+const formatDate = (date: Date) =>
+  new Intl.DateTimeFormat('es-CO', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date)
+---
+
+<Layout
+  title="Blog de Aventura y Ecoturismo en Útica | Horse Payo"
+  description="Guías, consejos y rutas para disfrutar del ecoturismo y deportes extremos en Útica, Cundinamarca. Canopy, rafting, cabalgata y más."
+  canonical="https://deportesextremoshorsepayo.com/blog/"
+>
+  <Navbar />
+
+  <main>
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-primary-dark via-primary to-forest-700 overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-1/4 right-1/4 w-72 h-72 rounded-full bg-accent/30 blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/3 left-1/4 w-64 h-64 rounded-full bg-accent-light/30 blur-3xl animate-pulse" style="animation-delay:1s"></div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-white text-sm font-medium px-4 py-2 rounded-full mb-6">
+          📚 BLOG DE AVENTURA
+        </span>
+        <h1 class="text-white font-heading font-black text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6">
+          Guías y <span class="text-accent">consejos</span> de aventura
+        </h1>
+        <p class="text-white/85 text-lg sm:text-xl font-body max-w-2xl mx-auto">
+          Todo lo que necesitas saber para planificar tu próxima aventura en Útica, Cundinamarca. Rutas, precios, recomendaciones y más.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-forest-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {posts.length === 0 ? (
+          <p class="text-center text-gray-500 text-lg">Aún no hay artículos publicados. Vuelve pronto.</p>
+        ) : (
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post, i) => (
+              <article
+                class={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 reveal reveal-delay-${Math.min(i + 1, 5)}`}
+              >
+                {post.data.image && (
+                  <a href={`/blog/${post.slug}/`} class="block relative h-52 overflow-hidden">
+                    <img
+                      src={post.data.image}
+                      alt={post.data.imageAlt || post.data.title}
+                      class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                      width="800"
+                      height="520"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                )}
+                <div class="p-6">
+                  {post.data.tags.length > 0 && (
+                    <div class="flex flex-wrap gap-2 mb-3">
+                      {post.data.tags.slice(0, 2).map((tag) => (
+                        <span class="badge-activity text-xs">{tag}</span>
+                      ))}
+                    </div>
+                  )}
+                  <h2 class="font-heading font-bold text-xl text-primary-dark mb-3 hover:text-primary transition-colors">
+                    <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+                  </h2>
+                  <p class="text-gray-500 text-sm font-body leading-relaxed mb-4">
+                    {post.data.description}
+                  </p>
+                  <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-400">
+                    <time datetime={post.data.pubDate.toISOString()}>
+                      {formatDate(post.data.pubDate)}
+                    </time>
+                    {post.data.readingTime && <span>{post.data.readingTime} de lectura</span>}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+</Layout>
