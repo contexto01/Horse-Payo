@@ -203,6 +203,69 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
     </section>
 
     <FormContacto />
+
+    <!-- Product + FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Cuatrimotos 4x4 en Útica – Horse Payo",
+          "description": "Rutas en cuatrimoto automática 4x4 por senderos de montaña en Útica, Cundinamarca. Inducción completa, equipo de protección (casco, guantes, gafas) y guías expertos. Apto para mayores de 16 años. A solo 2 horas de Bogotá.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Horse Payo"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "230000",
+            "priceCurrency": "COP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://deportesextremoshorsepayo.com/cuatrimotos-utica/"
+          },
+          "image": "https://deportesextremoshorsepayo.com/plan-cuatrimoto.jpg"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuánto cuesta la cuatrimoto en Útica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El Pasadía 2 (Cuatrimoto + Cabalgata + Circuito) tiene un valor de $230.000 por persona. Incluye inducción, equipo de protección, guías, almuerzo y parqueadero."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Necesito experiencia previa para manejar cuatrimoto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Nuestras cuatrimotos son automáticas 4x4, fáciles de manejar incluso para principiantes. Antes de cada salida recibirás inducción completa y todo el equipo de seguridad necesario."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es la edad mínima para andar en cuatrimoto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La edad mínima para conducir cuatrimoto en Horse Payo es 16 años. Los menores pueden ir como acompañantes en algunas rutas, previa consulta."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué incluye la experiencia en cuatrimoto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ruta en cuatrimoto 4x4 por senderos de montaña, inducción, casco, guantes, gafas, guía experto, almuerzo tradicional, ingreso a piscina y parqueadero vigilado."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </main>
 
   <Footer />

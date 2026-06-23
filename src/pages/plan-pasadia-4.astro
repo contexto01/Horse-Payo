@@ -205,6 +205,69 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
     </section>
 
     <FormContacto />
+
+    <!-- Product + FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Plan Pasadía 4 – Cuatrimoto + Rafting + Cabalgata | Horse Payo",
+          "description": "Plan Pasadía 4 en Horse Payo, Útica: Cuatrimoto todo terreno 4x4 + Rafting extremo con descenso en balsa y minitren + Cabalgata ecológica guiada. Incluye almuerzo típico, piscina, parqueadero vigilado, guías certificados y seguro de accidentes. Desde $290.000 por persona.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Horse Payo"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "290000",
+            "priceCurrency": "COP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://deportesextremoshorsepayo.com/plan-pasadia-4/"
+          },
+          "image": "https://deportesextremoshorsepayo.com/plan-cuatrimoto.jpg"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuánto cuesta el Plan Pasadía 4 en Útica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El Plan Pasadía 4 (Cuatrimoto + Rafting + Cabalgata) tiene un valor de $290.000 por persona. Incluye todas las actividades, guías certificados, equipo, almuerzo típico, ingreso a piscina y parqueadero vigilado."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué incluye el Plan Pasadía 4 de Horse Payo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Incluye ruta en cuatrimoto 4x4, rafting extremo (descenso en balsa + minitren), cabalgata ecológica guiada, almuerzo tradicional, acceso a piscina natural, parqueadero vigilado, guías certificados y seguro de accidentes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto dura el Plan Pasadía 4?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La experiencia completa dura entre 6 y 8 horas, desde las 8:00 AM hasta aproximadamente las 4:00 PM. Recomendamos llegar temprano para aprovechar al máximo todas las actividades."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo reservo el Plan Pasadía 4?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Puedes reservar directamente por WhatsApp al +57 322 883 7910 o a través del formulario de contacto. No se requiere pago anticipado, pagas al llegar al parque. Cancelación gratuita con 24 horas de anticipación."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </main>
 
   <Footer />

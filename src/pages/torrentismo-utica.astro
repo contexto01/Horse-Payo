@@ -140,6 +140,69 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
     </section>
 
     <FormContacto />
+
+    <!-- Product + FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Torrentismo en Útica – Descenso de cascadas | Horse Payo",
+          "description": "Descenso de cascadas naturales de hasta 30 metros con cuerdas dinámicas, arneses y sistemas de aseguramiento profesional. Instructores certificados en rescate vertical, equipo de primera calidad y muro de entrenamiento. A solo 2 horas de Bogotá.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Horse Payo"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "280000",
+            "priceCurrency": "COP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://deportesextremoshorsepayo.com/torrentismo-utica/"
+          },
+          "image": "https://deportesextremoshorsepayo.com/TorrentismoBanner.jpeg"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es el torrentismo y qué tan extremo es?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El torrentismo es el descenso de cascadas naturales de hasta 30 metros utilizando cuerdas dinámicas, arneses y sistemas de aseguramiento profesional. En Horse Payo contamos con instructores certificados en rescate vertical y muro de entrenamiento previo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto cuesta el torrentismo en Útica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El Pasadía 7 (Torrentismo Natural + Rafting) tiene un valor de $280.000 por persona. Incluye capacitación previa, equipo profesional, guías certificados, almuerzo y parqueadero vigilado."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Necesito experiencia previa para hacer torrentismo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Antes del descenso recibirás una capacitación completa en nuestro muro de entrenamiento. Nuestros instructores te guiarán paso a paso. Es apto para principiantes con buen estado físico."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es la edad mínima para hacer torrentismo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La edad mínima es 14 años con acompañamiento de un adulto. Se requiere buen estado físico, no tener lesiones graves ni condiciones cardíacas. Se recomienda no participar durante el embarazo."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </main>
 
   <Footer />

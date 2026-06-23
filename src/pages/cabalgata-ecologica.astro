@@ -176,6 +176,69 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro'
     </section>
 
     <FormContacto />
+
+    <!-- Product + FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Cabalgata Ecológica en Útica – Horse Payo",
+          "description": "Paseo a caballo guiado por senderos naturales en Útica, Cundinamarca. Caballos dóciles y entrenados, guías locales, equipo de seguridad completo. Apto para principiantes y jinetes experimentados. A solo 2 horas de Bogotá.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Horse Payo"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "190000",
+            "priceCurrency": "COP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://deportesextremoshorsepayo.com/cabalgata-ecologica/"
+          },
+          "image": "https://deportesextremoshorsepayo.com/plan-cabalgata.jpg"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuánto cuesta la cabalgata ecológica en Útica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El Pasadía 6 (Cabalgata + Circuito) tiene un valor de $190.000 por persona. Incluye cabalgata guiada, almuerzo típico, ingreso a instalaciones, piscina y parqueadero vigilado."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Necesito experiencia previa para montar a caballo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Nuestros caballos son dóciles y entrenados, aptos para principiantes. Antes de cada salida recibirás instrucciones básicas de monta y equipo de seguridad completo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué incluye la cabalgata en Horse Payo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Incluye cabalgata guiada por senderos naturales, guía local experto, equipo de seguridad, almuerzo tradicional, ingreso a las instalaciones y piscina natural. Disponible sola o combinada con canopy, rafting o cuatrimotos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué tan lejos está Horse Payo de Bogotá?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Horse Payo está en Útica, Cundinamarca, a solo 2 horas de Bogotá por vía 100% pavimentada. Contamos con parqueadero vigilado gratuito en el lugar."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </main>
 
   <Footer />
