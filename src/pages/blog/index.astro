@@ -1,8 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Navbar from '../components/Navbar.astro'
-import Footer from '../components/Footer.astro'
-import WhatsAppFloat from '../components/WhatsAppFloat.astro'
+import Layout from '../../layouts/Layout.astro'
+import Navbar from '../../components/Navbar.astro'
+import Footer from '../../components/Footer.astro'
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro'
 import { getCollection } from 'astro:content'
 
 const posts = (await getCollection('blog')).sort(
