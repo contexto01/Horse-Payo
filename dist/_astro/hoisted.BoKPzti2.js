@@ -1,0 +1,1 @@
+import"./hoisted.TGxGDCL2.js";import"./hoisted.2T5VkXwx.js";import"./hoisted.VOkLG5FM.js";const t=document.querySelectorAll(".hero-slide");let e=0;const s=t.length;s>1&&setInterval(()=>{t[e].classList.remove("hero-slide-active"),t[e].classList.add("opacity-0"),e=(e+1)%s,t[e].classList.add("hero-slide-active"),t[e].classList.remove("opacity-0")},5e3);
