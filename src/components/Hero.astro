@@ -1,14 +1,14 @@
 ---
 // Hero Section – Vive la Aventura Extrema (carrusel + shadow/glow)
 const slides = [
-  { id: 1, name: 'Principal', alt: 'Horse Payo – Aventura y ecoturismo en Útica, Cundinamarca' },
-  { id: 2, name: 'Rafting', alt: 'Rafting extremo en los rápidos de Útica, Cundinamarca' },
-  { id: 3, name: 'Canopy', alt: 'Canopy extremo entre árboles centenarios en Útica' },
-  { id: 4, name: 'Cuatrimotos', alt: 'Cuatrimotos 4x4 por senderos de montaña en Útica' },
-  { id: 5, name: 'Cabalgata', alt: 'Cabalgata ecológica guiada en Útica, Cundinamarca' },
-  { id: 6, name: 'Torrentismo', alt: 'Torrentismo en cascadas naturales de Útica' },
-  { id: 7, name: 'Aventura 1', alt: 'Aventura extrema en Horse Payo, Útica' },
-  { id: 8, name: 'Aventura 2', alt: 'Vive la adrenalina en Horse Payo, Útica, Cundinamarca' },
+  { webp: '/hero.webp', jpg: '/hero.jpg', alt: 'Horse Payo – Aventura y ecoturismo en Útica, Cundinamarca' },
+  { webp: '/plan-rafting.webp', jpg: '/plan-rafting.jpg', alt: 'Rafting extremo en los rápidos de Útica, Cundinamarca' },
+  { webp: '/Canopy3.webp', jpg: '/Canopy3.webp', alt: 'Canopy extremo entre árboles centenarios en Útica' },
+  { webp: '/cuatrimotos-hero.webp', jpg: '/CuatrimotosBanner.jpeg', alt: 'Cuatrimotos 4x4 por senderos de montaña en Útica' },
+  { webp: '/cabalgata-hero.webp', jpg: '/cabalgataBanner.jpeg', alt: 'Cabalgata ecológica guiada en Útica, Cundinamarca' },
+  { webp: '/torrentismo-hero.webp', jpg: '/TorrentismoBanner.jpeg', alt: 'Torrentismo en cascadas naturales de Útica' },
+  { webp: '/hero-slide-7.webp', jpg: '/hero-slide-7.jpg', alt: 'Aventura extrema en Horse Payo, Útica' },
+  { webp: '/hero-slide-8.webp', jpg: '/hero-slide-8.jpg', alt: 'Vive la adrenalina en Horse Payo, Útica, Cundinamarca' },
 ]
 ---
 
@@ -18,14 +18,12 @@ const slides = [
   <div class="absolute inset-0 z-0" aria-hidden="true">
     {slides.map((slide, i) => (
       <picture class={`hero-slide absolute inset-0 transition-opacity duration-[1.2s] ease-in-out ${i === 0 ? 'hero-slide-active' : 'opacity-0'}`} data-index={i}>
-        <source srcset={`/hero-slide-${slide.id}.webp`} type="image/webp" />
-        <source srcset={`/hero-slide-${slide.id}.jpg`} type="image/jpeg" />
+        <source srcset={slide.webp} type="image/webp" />
+        <source srcset={slide.jpg} type="image/jpeg" />
         <img
-          src={`/hero-slide-${slide.id}.jpg`}
+          src={slide.jpg}
           alt={slide.alt}
           class="w-full h-full object-cover object-center"
-          width="1600"
-          height="900"
           loading={i === 0 ? 'eager' : 'lazy'}
           fetchpriority={i === 0 ? 'high' : 'auto'}
           decoding="async"
