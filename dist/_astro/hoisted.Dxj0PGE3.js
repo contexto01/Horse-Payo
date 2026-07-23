@@ -1,0 +1,1 @@
+if(window.location.hash){const e=document.querySelector(window.location.hash);e&&setTimeout(()=>{e.scrollIntoView({behavior:"smooth",block:"start"})},300)}const t=new IntersectionObserver(e=>{e.forEach(o=>{o.isIntersecting&&o.target.classList.add("visible")})},{threshold:.1});document.querySelectorAll(".reveal").forEach(e=>t.observe(e));

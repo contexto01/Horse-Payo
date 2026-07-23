@@ -150,7 +150,7 @@ const plans = [
               href={`https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20${encodeURIComponent(plan.name)}%20en%20Horse%20Payo`}
               target="_blank"
               rel="noopener noreferrer"
-              onclick={`fbq('track', 'InitiateCheckout', {content_name: '${plan.name}', content_ids: ['${plan.id}'], currency: 'COP', value: ${parseInt(plan.pricePerPerson.replace(/[\$.,]/g, ''))}})`}
+              onclick={`fbq('track', 'Contact', {content_name: '${plan.name}', content_ids: ['${plan.id}'], content_category: 'contact', currency: 'COP', value: ${parseInt(plan.pricePerPerson.replace(/[\$.,]/g, ''))}}})`}
               class={`mt-5 w-full flex items-center justify-center gap-2 font-bold py-3.5 px-6 rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 ${
                 plan.highlight
                   ? 'bg-accent text-primary-dark hover:bg-accent-dark'

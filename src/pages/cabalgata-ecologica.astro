@@ -37,7 +37,7 @@ import OtrasAventuras from '../components/OtrasAventuras.astro'
             Recorre senderos naturales a caballo con guías que comparten la historia local. Una experiencia de conexión con la naturaleza a solo 2 horas de Bogotá.
           </p>
           <div class="flex flex-wrap gap-4">
-            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20cabalgata%20ecol%C3%B3gica%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Cabalgata Hero', currency: 'COP'})" class="bg-accent text-primary-dark font-bold px-8 py-4 rounded-full hover:bg-accent-dark transition-all duration-300 hover:scale-105 shadow-xl text-base inline-flex items-center gap-3">
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20cabalgata%20ecol%C3%B3gica%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'Cabalgata Hero', currency: 'COP'}); dataLayer.push({event:'cta_click',plan:'cabalgata'})" class="bg-accent text-primary-dark font-bold px-8 py-4 rounded-full hover:bg-accent-dark transition-all duration-300 hover:scale-105 shadow-xl text-base inline-flex items-center gap-3">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
               Reservar Cabalgata Ahora
             </a>
@@ -86,7 +86,7 @@ import OtrasAventuras from '../components/OtrasAventuras.astro'
     </section>
 
     <!-- Plans that include cabalgata -->
-    <section class="py-24 bg-forest-50">
+    <section id="planes" class="py-24 bg-forest-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-14">
           <h2 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mb-4 reveal">
@@ -110,7 +110,7 @@ import OtrasAventuras from '../components/OtrasAventuras.astro'
               <li class="flex items-center gap-2">🍲 Almuerzo Tradicional Incluido</li>
               <li class="flex items-center gap-2">🎟️ Ingreso a las instalaciones y piscina</li>
             </ul>
-            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%206%20(Cabalgata%20%2B%20Circuito)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Cabalgata Pasadía 6', content_ids: ['pasadia_6'], value: 190000, currency: 'COP'})" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%206%20(Cabalgata%20%2B%20Circuito)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'Cabalgata Pasadía 6', content_ids: ['pasadia_6'], value: 190000, currency: 'COP'})" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
               ⚡ Reservar Plan
             </a>
           </div>
@@ -128,7 +128,7 @@ import OtrasAventuras from '../components/OtrasAventuras.astro'
               <li class="flex items-center gap-2">🍲 Almuerzo Tradicional Incluido</li>
               <li class="flex items-center gap-2">🎟️ Ingreso a las instalaciones y piscina</li>
             </ul>
-            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%202%20(Cabalgata%20%2B%20Cuatrimoto%20%2B%20Circuito)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Cabalgata Pasadía 2', content_ids: ['pasadia_2'], value: 230000, currency: 'COP'})" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%202%20(Cabalgata%20%2B%20Cuatrimoto%20%2B%20Circuito)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'Cabalgata Pasadía 2', content_ids: ['pasadia_2'], value: 230000, currency: 'COP'})" class="w-full bg-primary-dark text-white font-bold py-3 rounded-xl hover:bg-primary transition-all duration-300 inline-flex items-center justify-center gap-2">
               ⚡ Reservar Plan
             </a>
           </div>
@@ -148,7 +148,7 @@ import OtrasAventuras from '../components/OtrasAventuras.astro'
               <li class="flex items-center gap-2">🍲 Almuerzo Tradicional Incluido</li>
               <li class="flex items-center gap-2">🎟️ Ingreso a las instalaciones y piscina</li>
             </ul>
-            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%205%20(Aventura%20Total)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Cabalgata Pasadía 5', content_ids: ['pasadia_5'], value: 350000, currency: 'COP'})" class="w-full bg-accent text-primary-dark font-bold py-3 rounded-xl hover:bg-accent-dark transition-all duration-300 inline-flex items-center justify-center gap-2">
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%205%20(Aventura%20Total)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'Cabalgata Pasadía 5', content_ids: ['pasadia_5'], value: 350000, currency: 'COP'})" class="w-full bg-accent text-primary-dark font-bold py-3 rounded-xl hover:bg-accent-dark transition-all duration-300 inline-flex items-center justify-center gap-2">
               📲 Reservar Ahora
             </a>
           </div>
@@ -169,7 +169,7 @@ import OtrasAventuras from '../components/OtrasAventuras.astro'
         <p class="text-primary-dark/70 text-lg font-body max-w-xl mx-auto mb-10 reveal reveal-delay-1">
           Reserva tu cabalgata ecológica hoy y vive una experiencia inolvidable.
         </p>
-        <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20cabalgata%20ecol%C3%B3gica%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Cabalgata CTA Final', currency: 'COP'})" class="bg-primary-dark text-white font-bold px-10 py-4 rounded-full inline-flex items-center gap-3 hover:bg-primary transition-all duration-300 hover:scale-105 shadow-xl text-lg reveal reveal-delay-2">
+        <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20cabalgata%20ecol%C3%B3gica%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'Cabalgata CTA Final', currency: 'COP'})" class="bg-primary-dark text-white font-bold px-10 py-4 rounded-full inline-flex items-center gap-3 hover:bg-primary transition-all duration-300 hover:scale-105 shadow-xl text-lg reveal reveal-delay-2">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
           Reservar Cabalgata
         </a>

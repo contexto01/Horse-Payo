@@ -421,5 +421,17 @@ const siteUrl = 'https://deportesextremoshorsepayo.com'
 
       document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
     </script>
+
+    <!-- Smooth scroll to hash (for Meta Ads traffic) -->
+    <script>
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash)
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }, 300)
+        }
+      }
+    </script>
   </body>
 </html>

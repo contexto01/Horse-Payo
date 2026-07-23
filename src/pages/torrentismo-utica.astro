@@ -37,7 +37,7 @@ import OtrasAventuras from '../components/OtrasAventuras.astro'
             Desciende cascadas naturales con cuerdas y equipo profesional. La experiencia de torrentismo más extrema de Cundinamarca a solo 2 horas de Bogotá.
           </p>
           <div class="flex flex-wrap gap-4">
-            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20torrentismo%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Torrentismo Hero', currency: 'COP'})" class="bg-accent text-primary-dark font-bold px-8 py-4 rounded-full hover:bg-accent-dark transition-all duration-300 hover:scale-105 shadow-xl text-base inline-flex items-center gap-3">
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20torrentismo%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'Torrentismo Hero', currency: 'COP'}); dataLayer.push({event:'cta_click',plan:'torrentismo'})" class="bg-accent text-primary-dark font-bold px-8 py-4 rounded-full hover:bg-accent-dark transition-all duration-300 hover:scale-105 shadow-xl text-base inline-flex items-center gap-3">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
               Reservar Torrentismo Ahora
             </a>
@@ -86,7 +86,7 @@ import OtrasAventuras from '../components/OtrasAventuras.astro'
     </section>
 
     <!-- Plan 7 highlight -->
-    <section class="py-24 bg-forest-50">
+    <section id="planes" class="py-24 bg-forest-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto text-center mb-12">
           <h2 class="font-heading font-black text-4xl sm:text-5xl text-primary-dark mb-4 reveal">
@@ -111,7 +111,7 @@ import OtrasAventuras from '../components/OtrasAventuras.astro'
               <li class="flex items-center gap-3">🍲 Almuerzo Tradicional Incluido</li>
               <li class="flex items-center gap-3">🎟️ Ingreso a las instalaciones y piscina</li>
             </ul>
-            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%207%20(Desaf%C3%ADo%20Acu%C3%A1tico%20Natural)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Torrentismo Pasadía 7', content_ids: ['pasadia_7'], value: 280000, currency: 'COP'})" class="w-full bg-accent text-primary-dark font-bold py-4 rounded-xl hover:bg-accent-dark transition-all duration-300 inline-flex items-center justify-center gap-2 text-lg">
+            <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20el%20Plan%20Pasad%C3%ADa%207%20(Desaf%C3%ADo%20Acu%C3%A1tico%20Natural)%20en%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'Torrentismo Pasadía 7', content_ids: ['pasadia_7'], value: 280000, currency: 'COP'})" class="w-full bg-accent text-primary-dark font-bold py-4 rounded-xl hover:bg-accent-dark transition-all duration-300 inline-flex items-center justify-center gap-2 text-lg">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
               Reservar Torrentismo + Rafting
             </a>
@@ -133,7 +133,7 @@ import OtrasAventuras from '../components/OtrasAventuras.astro'
         <p class="text-primary-dark/70 text-lg font-body max-w-xl mx-auto mb-10 reveal reveal-delay-1">
           Reserva tu experiencia de torrentismo hoy. Cupos limitados por seguridad.
         </p>
-        <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20torrentismo%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Torrentismo CTA Final', currency: 'COP'})" class="bg-primary-dark text-white font-bold px-10 py-4 rounded-full inline-flex items-center gap-3 hover:bg-primary transition-all duration-300 hover:scale-105 shadow-xl text-lg reveal reveal-delay-2">
+        <a href="https://wa.me/573228837910?text=Hola!%20Quiero%20reservar%20torrentismo%20en%20%C3%9Atica%20con%20Horse%20Payo" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'Torrentismo CTA Final', currency: 'COP'})" class="bg-primary-dark text-white font-bold px-10 py-4 rounded-full inline-flex items-center gap-3 hover:bg-primary transition-all duration-300 hover:scale-105 shadow-xl text-lg reveal reveal-delay-2">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
           Reservar Torrentismo
         </a>
