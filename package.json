@@ -15,6 +15,7 @@
     "tailwindcss": "^3.4.10"
   },
   "devDependencies": {
-    "heic-decode": "^2.1.0"
+    "heic-decode": "^2.1.0",
+    "typescript": "^5.9.3"
   }
 }
