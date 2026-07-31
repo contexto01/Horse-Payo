@@ -124,13 +124,33 @@ const waNumber = '573228837910'
   form?.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    fbq('track', 'Lead', {content_name: 'Formulario Contacto', currency: 'COP'})
-    fbq('track', 'Contact', {content_name: 'Formulario Contacto', content_category: 'contact'})
-
     const formData = new FormData(form)
     const nombre = formData.get('nombre')?.toString().trim() || ''
     const telefono = formData.get('telefono')?.toString().trim() || ''
     const email = formData.get('email')?.toString().trim() || ''
+
+    const userData = {}
+    if (email) userData.em = email
+    if (telefono) userData.ph = telefono
+    if (nombre) {
+      const nameParts = nombre.split(' ')
+      userData.fn = nameParts[0]
+      if (nameParts.length > 1) userData.ln = nameParts.slice(1).join(' ')
+    }
+
+    const eventParams = {
+      content_name: 'Formulario Contacto',
+      currency: 'COP',
+      ...userData,
+    }
+    fbq('track', 'Lead', eventParams)
+
+    const contactParams = {
+      content_name: 'Formulario Contacto',
+      content_category: 'contact',
+      ...userData,
+    }
+    fbq('track', 'Contact', contactParams)
     const plan = formData.get('plan')?.toString().trim() || ''
     const mensaje = formData.get('mensaje')?.toString().trim() || ''
 
